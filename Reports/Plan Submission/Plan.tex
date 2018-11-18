@@ -53,38 +53,121 @@
     \newpage
 
     {\color{color_section}\section{Group presentation}}
-        TODO
+        Mac group is composed by four students and three different nationalities.
+        Swedish, Croatian and French. As part of our Erasmus exchange program, 
+        we want to develop a web application which could be used by a lot 
+        of people around the world and especially by Erasmus people.
+        
+        \begin{figure} [h!]
+            \begin{minipage}[c]{0.35\linewidth}
+                \includegraphics[width=0.7\textwidth]{./Pictures/cro.png}
+            \end{minipage}
+            \hfill
+            \begin{minipage}[c]{0.29\linewidth}
+                \includegraphics[width=0.7\textwidth]{./Pictures/france.png}
+            \end{minipage}
+            \begin{minipage}[c]{0.29\linewidth}
+                \hfill
+                \includegraphics[width=0.7\textwidth]{./Pictures/sweden.png}
+            \end{minipage}
+        \end{figure}
 
 
     {\color{color_section}\section{Plan presentation}}
         {\color{color_subsection}\subsection{Web app description}}
-        Usually, when (young) people go to some foreign country, and they are not sure where and what to eat, the most simple choice is to choose McDonalds restaurant. Therefore, we decided to create the app that will help us finding the nearest McDonalds restaurant, but will also give us and few other important information. For example, we might be interested whether the McDonalds we want to visit has drive in option, or maybe we just want to find out the exact calorie content of meals we want to eat. Also, additional information that we might find useful would be comparing prices from different countries, so we know how much more or less money are we paying than we would pay in our home country. If we feel that we have the time, we will add more functionality along the way.\\ \\ \\
-           The main purpose of the web application is to conveniently display statistics about McDonalds. Such as finding the nearest restaurant, listing calorie content of meals and comparing prices from different countries. If we feel that we have the time, we will add more functionality along the way.
+        
+        Usually, when (young) people go to some foreign country, and they
+        are not sure where and what to eat, the most simple choice is to
+        choose McDonalds restaurant. Therefore, we decided to create a web 
+        app that will help us finding the nearest McDonalds restaurant, 
+        but that will also give us a few other important information.\\
+        
+        \noindent For example, we might be interested whether the McDonalds we want 
+        to visit has drive in option, or maybe we just want to find out 
+        the exact calorie content of meals we want to eat. Also, additional 
+        information that we might find useful would be comparing prices from 
+        different countries, so we will know how much more or less money are we 
+        paying than we would pay in our home country. If we feel that we 
+        have the time, we will add more functionality along the way.\\
+
+        \noindent So our first feature will be to implement a map that will provide
+        the nearest MacDonald restaurant to the user thanks to his coordonates.
+        (We already found open source databases for all restaurants in Europe and USA.)\\
+
+        \noindent Our second feature will be to compare the prices of MacDonalds meals
+        in each country and show them by drawing a dynamic graphic. We will be
+        able to select countries we want to compare. If we can find all the
+        required databases we would also be able to compare the differences
+        between availables meals in each restaurant.\\
+
+        \noindent Our third feature will be a menu picker that will help you to choose
+        your menu regarding of what you want (cheapest, fatest... whatever).
+        And show the price of it regarding of the country (if we can find the
+        appropriate database for that.)\\
+
+        \noindent Those will compose our application's core. As we said, if we feel
+        that we have the time to implement more features, we will.
+
+        \newpage
 
         {\color{color_subsection}\subsection{Planning and Roles}}
+        \vspace{1em}
            
 	\begin{center}
-	\begin{tabular}{ |c|c|c|c| } 
- 	\hline
-	 \textbf{Task} & \textbf{When} & \textbf{Who} & \textbf{Estimated Time}  \\
-	\hline
- 	Project plan & until 18.11. & Bastien and Matteo & 2 hours \\ 
- 	\hline
- 	Plan presentation & until 18.11. & Henrikki and Jens & 2 hours \\
- 	 	\hline
- 	Documentation & January & someone & 6 hours \\ 
- 	 	\hline
- 	Implementation & December and January & everyone & \~10 hours \\
- 	 	\hline 
- 	Result presentation & until 30.01. & everyone & 4 hours \\  
-	 \hline
-	\end{tabular}
-	\end{center}
-	
+	    \begin{tabular}{ |c|c|c|c| } 
+ 	        \hline
+	        \textbf{Task} & \textbf{Estimated deadline} & \textbf{Who} & \textbf{Estimated Time}  \\
+	        \hline
+ 	        Project plan & until 18.11. & Bastien and Matteo & 3 hours \\ 
+ 	        \hline
+ 	        Plan presentation & until 18.11. & Henrikki and Jens & 2 hours \\
+            \hline 
+            Result presentation & until 30.01. & everyone & 5 hours \\ 
+            \hline 
+        \end{tabular}
+    \end{center}
+    
+    \begin{center}
+        \begin{tabular}{ |c|c|c|c| } 
+            \hline
+            \textbf{Implementation} & \textbf{Estimated deadline} & \textbf{Who} & \textbf{$\approx$ 80 hours} \\
+            \hline
+            Responsive map & 14.12 & 2 people & 10 hours each \\
+            \hline
+ 	        Statistical drawings & 10.01 & 2 people & 10 hours each\\  
+            \hline
+            Menu picker & 20.01 & 2 people & 10 hours each \\
+            \hline
+            Other features & 30.01 & 2 people & 10 hours each \\
+	        \hline
+	    \end{tabular}
+    \end{center}
+    
+    \begin{center}
+        \begin{tabular}{ |c|c|c|c| } 
+            \hline
+            \textbf{Documentation} & \textbf{Estimated deadline} & \textbf{Who} & \textbf{$\approx$ 12 hours} \\
+            \hline
+            First drafts & 01.12 & Bastien & 3 hours \\
+            \hline
+ 	        Technologies description & 30.01 & 2 people & 3 hours\\  
+            \hline
+            User manual & 30.01 & 2 people & 4 hours \\
+            \hline
+            Other documents & 30.01 & 2 people & 2 hours \\
+	        \hline
+	    \end{tabular}
+    \end{center}
+    
+    {\color{color_subsection}\subsection{Member responsabilities}}
 
+    \noindent As long as we will have new features to implement, we will work by teams
+    of two people on each. In that way, we will be more efficient and more
+    focus in our task. We didn't decide who is going to do which task yet.
+    We will decide it as soon as possible.\\
 
-
-        {\color{color_subsection}\subsection{Roles}}
-            TODO
+    \noindent For our Mac Fat web application Bastien will certainly be the manager of
+    the group. Taking care of every deadline respected and also keeping an eye 
+    on every work to be sure to reach the goal.\\
 
 \end{document}
