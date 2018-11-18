@@ -120,6 +120,9 @@ INPUT ./Pictures/france.png
 INPUT ./Pictures/sweden.png
 INPUT ./Pictures/sweden.png
 INPUT ./Pictures/sweden.png
+INPUT ./Pictures/finnish.png
+INPUT ./Pictures/finnish.png
+INPUT ./Pictures/finnish.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT Plan.aux
