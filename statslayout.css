@@ -1,0 +1,30 @@
+nav {
+   width:77%;
+   height:40px;
+   left:200;
+   -moz-border-radius:10px;
+   -webkit-border-radius:10px;
+   background:#50f399;
+   border:1px solid #cccccc;
+   position:absolute;
+   }
+     nav ul {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:0 auto;
+width:940px;
+}
+nav ul li {
+float:left;
+}
+nav ul li a{
+margin-right:40px;
+display:block;
+line-height:40px;
+}
+#statlist {
+  position:absolute;
+  left:650;
+  top:350;
+}
