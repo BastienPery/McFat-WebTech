@@ -1,6 +1,6 @@
-function loadXMLDoc(url) {
+var httpRequest = createHttpRequest();
 
-    var httpRequest = false;
+function createHttpRequest() {
 
     if (window.XMLHttpRequest) { //Mozilla,Safari ...
         httpRequest = new XMLHttpRequest();
@@ -27,9 +27,7 @@ function loadXMLDoc(url) {
         return false;
     }
 
-    httpRequest.onreadystatechange = function () { alertContents(httpRequest); };
-    httpRequest.open('GET', url, true);
-    httpRequest.send(null);
+    return httpRequest;
 }
 
 function alertContents(httpRequest) {

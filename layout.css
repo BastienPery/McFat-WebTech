@@ -31,10 +31,13 @@ top:100;
 }
 
 #desc{
-
-  position:absolute;
-  left:450;
-  top:300;
-background:#e090e0;
-width:50%;
+	display: block;
+	margin-top: 4%;;
+    margin-left: auto;
+	margin-right: auto;
+	background:#333;
+	color: white;
+	width:50%;
+	height:50%;
+	
 }
