@@ -1,12 +1,9 @@
-var httpRequest = createHttpRequest();
+/* var httpRequest = createHttpRequest();
 
 function createHttpRequest() {
 
     if (window.XMLHttpRequest) { //Mozilla,Safari ...
         httpRequest = new XMLHttpRequest();
-        if (httpRequest.overrideMimeType) {
-            httpRequest.open('text/xml'); //Error if invalid XML
-        }
     }
 
     else if (window.ActiveXObject) { //IE
@@ -40,4 +37,21 @@ function alertContents(httpRequest) {
         }
     }
 
+} */
+
+function displayMacMap() {
+    $('#page').load('MacMap.html');
 }
+
+function displayMacHome() {
+    $('#page').load('MacHome.html');
+}
+
+function displayMacStats() {
+    $('#page').load('MacStats.html');
+}
+
+function displayMacMenu() {
+    $('#page').load('MacMenu.html');
+}
+

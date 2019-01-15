@@ -41,11 +41,11 @@ ul.topnav li a.active {
 
 ul.topnav li.right {float: right;}
 
-@media screen and (max-width: 600px){
+@media screen and (min-width: 800px){
     ul.topnav li.right, 
     ul.topnav li {float: none;}
-}
 
+}
 .button {
   border-radius: 7px;
   border: none;
