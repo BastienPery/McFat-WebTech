@@ -15,14 +15,14 @@
 </head>
 
 <body>
-    <div id="map"></div>
-    <script>loadMap()</script>
-    <div id="HTML_Geolocation">
-        <button onclick="displayCoordinates()">Display your coordinates</button>
-        <p id="user_coord">Lorem ipsum</p>
+    <div class="embed-container">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="McDonaldEurope" src="//tugraz-webtech.maps.arcgis.com/apps/Embed/index.html?webmap=77ef43b45fc749cb82485d31cf5c5fea&extent=-56.3437,21.9686,69.1641,68.9209&zoom=true&previewImage=false&scale=true&disable_scroll=false&theme=light"></iframe>
+        <div id="HTML_Geolocation">
+            <button onclick="displayCoordinates()">Display your coordinates</button>
+            <p id="user_coord"></p>
+        </div>
     </div>
+
 </body>
-
-
 
 </html>
