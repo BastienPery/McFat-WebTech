@@ -1,0 +1,19 @@
+
+#statlist {
+  position:fixed;
+  left:900px;
+  top:350px;
+}
+
+
+#country {
+  position:fixed;
+  left:400px;
+  top:350px;
+}
+
+#draw {
+  position:fixed;
+  left:900px;
+  top:500px;
+}

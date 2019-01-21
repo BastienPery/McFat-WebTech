@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8" />
+    <title>MacStats</title>
+
+    <script src="../Controllers/MacStats.js"></script>
+
+    <link href="MacStats.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+
+<div id = "country">
+<p>
+Country Selection:
+<select name="countries"  size="5" multiple>
+<option value="croatia">Croatia</option>
+<option value="france">France</option>
+<option value="sweden">Sweden</option>
+</select>
+</p>
+<button onclick="chooseAll()">Choose All</button>
+</div>
+
+
+
+<button id = "draw" onclick="drawStatistic()">Draw Statistic</button>
+
+<div id = "statlist">
+Statistic type :
+<select name="statistic" id = "statlist">
+<option value="price">Average meal price</option>
+<option value="drivein">Drive-in Option</option>
+</select>
+</div>
+
+</body>
+
+</html>
