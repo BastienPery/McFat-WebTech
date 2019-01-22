@@ -1,19 +1,35 @@
+body {
+	margin: 0;
+	font-family: 'McLetters','Times New Roman', Times;
+	background-image: url('background-test.jpg');
+	background-size: 100%;
+}
+
 
 #statlist {
   position:fixed;
   left:900px;
-  top:350px;
+  top:250px;
 }
+
+#chartContainer {
+  position:fixed;
+  height: 500px;
+  top:450px;
+  left:300px;
+   width: 70%;
+}
+
 
 
 #country {
   position:fixed;
   left:400px;
-  top:350px;
+  top:250px;
 }
 
 #draw {
   position:fixed;
   left:900px;
-  top:500px;
+  top:400px;
 }

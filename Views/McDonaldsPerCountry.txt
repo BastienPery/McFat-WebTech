@@ -1,0 +1,40 @@
+Netherlands, 245, 17284685
+Germany, 1476, 82887000
+France, 1419, 67372000
+Sweden, 197, 10215250
+United Kingdom, 1274, 66040229
+Switzerland, 167, 8526932
+Ireland, 89, 4857000
+Austria, 193, 8857960
+Belgium, 74, 11449656
+Spain, 507, 46733038
+Denmark, 89, 5806015
+Norway, 73, 5323933
+Andorra, 5, 74794
+Finland, 65, 5522015
+Luxembourg, 10, 602005
+Italy, 571, 60395921
+Turkey, 251, 80810525
+Serbia, 30, 7001444
+Hungary, 88, 9771000
+Portugal, 148, 10291027
+Greece, 23, 10768193
+Czech Republic, 98, 10627794
+Poland, 405, 38433600
+Monaco, 2, 38300
+Slovenia, 20, 2070050
+Bulgaria, 42, 7050034
+Latvia, 12, 1921300
+Estonia, 10, 1319133
+Romania, 70, 19523621
+Malta, 10, 475701
+Slovakia, 30, 5445087
+Croatia, 30, 4105493
+Liechtenstein, 1, 38201
+Lithuania, 13, 2793986
+Belarus, 15, 9477100
+Ukraine, 80, 42220824
+Moldova, 5, 3547539
+Azerbaijan, 15, 9959245
+Bosnia and Herzegovina, 3, 3511372
+Russia, 645, 146877088
