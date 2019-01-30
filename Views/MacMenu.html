@@ -8,50 +8,43 @@
       <!--CSS Stylesheets-->
       <link rel="stylesheet" type="text/css" href="MacMenu.css" />
       <title></title>
-	  
-	 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
    </head>
-
    <body>
-   <script>startTimer();</script>
+      <script>startTimer();</script>
       <p>Drag the meals to the rectangle ---- Click on the meal to remove it</p>
-	  <div id="proba">
-      <ul id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" class="list-unstyled list-inline text-center"></ul>
-      </ul>
-
-	  <div id="calories" style="color: red;">TOTAL CALORIES:</div>
-	  <br><br>
-	     <div style="width:800px; margin:0 auto;">
-	  <div>SEND ORDER TO YOUR EMAIL</div>
-		<input placeholder="Your Email" type="text" id="email" name="email" />
-		<input placeholder="Your Name" type="text" id="name" name="name" />
-		<input type="button" value="Submit" 
-		  onclick="sendEmail(document.getElementById('email').value, document.getElementById('name').value)" />
+      <div id="proba">
+         <ul id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" class="list-unstyled list-inline text-center"></ul>
+         </ul>
       </div>
-
+      <div id="calories" style="color: red;">TOTAL CALORIES:</div>
+      <br><br>
+      <div style="width:800px; margin:0 auto;">
+         <div>SEND ORDER TO YOUR EMAIL</div>
+         <input placeholder="Your Email" type="text" id="email" name="email" />
+         <input placeholder="Your Name" type="text" id="name" name="name" />
+         <input type="button" value="Submit" 
+            onclick="sendEmail(document.getElementById('email').value, document.getElementById('name').value)" />
+      </div>
       <h3>Main meals</h3>
       <ul id="main" class="list-unstyled list-inline text-center">
-	  <script>findMeals("main")</script>
-         
+         <script>findMeals("main")</script>
       </ul>
       <h3>Side meals</h3>
       <ul id="side" class="list-unstyled list-inline text-center">
-	  <script>findMeals("side")</script>
-
+         <script>findMeals("side")</script>
       </ul>
       <h3>Salads</h3>
       <ul id="salads" class="list-unstyled list-inline text-center">
-	  	  <script>findMeals("salads")</script>
+         <script>findMeals("salads")</script>
       </ul>
       <h3>Drinks</h3>
       <ul id="drinks" class="list-unstyled list-inline text-center">
-       <script>findMeals("drinks")</script>
-
+         <script>findMeals("drinks")</script>
       </ul>
       <h3>Deserts</h3>
       <ul id="deserts" class="list-unstyled list-inline text-center">
-       <script>findMeals("deserts")</script>
-
+         <script>findMeals("deserts")</script>
       </ul>
    </body>
 </html>
