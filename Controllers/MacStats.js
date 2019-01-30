@@ -94,27 +94,30 @@ options.appendTo("#countries");
 }
 
 function drawBarChart(title, text, labels) {
-  var chart = new CanvasJS.Chart("chartContainer", {
-animationEnabled: true,
+  var canvas = document.getElementById('myCanvas');
+// check for browser support
+if (canvas && canvas.getContext) {
+var ctx = canvas.getContext('2d');
+if (ctx) {
+  ctx.fillStyle = '#000';
+    }
+}
+canvas.width = 1000;
+canvas.height = 1000;
+ctx.font = "20px Arial";
+ctx.textAlign = "end"
+max = 0;
+maxDist = 600;
+for (i = 0; i < labels.length; i++) {
+  ctx.fillText(labels[i].label, 220, 20+20*i);
+  max = Math.max(max, labels[i].y);
+}
+  ctx.fillStyle = '#F00';
+for (i = 0; i < labels.length; i++) {
+  ctx.fillRect(230, 10+20*i, (labels[i].y/max)*maxDist,8);
+}
 
-title:{
-  text:title
-},
-axisX:{
-  interval: 1
-},
-axisY2:{
-  interlacedColor: "rgba(1,77,101,.2)",
-  gridColor: "rgba(1,77,101,.1)",
-  title: text
-},
-data: [{
-  type: "bar",
-  name: "mcdonalds",
-  axisYType: "secondary",
-  color: "#014D65",
-  dataPoints: labels
-}]
-});
-chart.render();
+
+
+
 }

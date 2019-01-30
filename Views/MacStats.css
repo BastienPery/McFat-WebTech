@@ -5,6 +5,14 @@ body {
 	background-size: 100%;
 }
 
+#myCanvas {
+	position:fixed;
+  height: 500px;
+  top:450px;
+  left:300px;
+   width: 70%;
+}
+
 
 #statlist {
   position:fixed;
@@ -12,13 +20,6 @@ body {
   top:250px;
 }
 
-#chartContainer {
-  position:fixed;
-  height: 500px;
-  top:450px;
-  left:300px;
-   width: 70%;
-}
 
 
 

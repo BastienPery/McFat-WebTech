@@ -10,7 +10,6 @@
     <script src="../Controllers/jquery.js"></script>
     <script src="../database.js"></script>
 
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
     <link href="MacStats.css" rel="stylesheet" />
 
@@ -30,7 +29,6 @@ onLoad();
 </script>
 
 <body>
-  <div id="chartContainer"></div>
 
 <div id = "country">
 <p>
@@ -41,6 +39,7 @@ Country Selection:
 <button onclick="chooseAll()">Choose All</button>
 </div>
 
+<canvas id="myCanvas" width="200" height="100"> </canvas>
 
 
 <button id = "draw" onclick="drawStatistic()">Draw Statistic</button>
@@ -50,8 +49,6 @@ Statistic type :
 <select name="statistic" id = "stats">
 <option value="nbr">Number of McDonalds</option>
 <option value="nbrPC">Number of McDonalds per 100 000 persons</option>
-<option value="price">Average meal price</option>
-<option value="drivein">Drive-in Option</option>
 </select>
 </div>
 
