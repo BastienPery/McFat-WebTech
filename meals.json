@@ -1,0 +1,194 @@
+[
+   {
+      "mealId":"baconrosty",
+      "mealName":"Bacon Rosty",
+      "calories":772,
+	  "type": "main"
+   },
+   {
+      "mealId":"bigmac",
+      "mealName":"Big Mac",
+      "calories":503,
+	  "type": "main"
+   },
+   {
+      "mealId":"bigtasty",
+      "mealName":"Big Tasty",
+      "calories":828,
+	  "type": "main"
+   },
+   {
+      "mealId":"cheeseburger",
+      "mealName":"Cheeseburger",
+      "calories":302,
+	  "type": "main"
+   },
+   {
+      "mealId":"hamburger",
+      "mealName":"Hamburger",
+      "calories":253,
+	  "type": "main"
+   },
+   {
+      "mealId":"mcchicken",
+      "mealName":"McChicken",
+      "calories":426,
+	  "type": "main"
+   },
+   {
+      "mealId":"mccountry",
+      "mealName":"McCountry",
+      "calories":524,
+	  "type": "main"
+   },
+   {
+      "mealId":"mcnuggets9",
+      "mealName":"9 McNuggets",
+      "calories":402,
+	  "type": "main"
+   },
+   {
+      "mealId":"toast",
+      "mealName":"Toast",
+      "calories":207,
+	  "type": "main"
+   },
+   {
+      "mealId":"fries",
+      "mealName":"Fries",
+      "calories":434,
+	  "type": "side"
+   },
+   {
+      "mealId":"potato",
+      "mealName":"Potato Wedges",
+      "calories":282,
+	  "type": "side"
+   },
+   {
+      "mealId":"ketchup",
+      "mealName":"Ketchup",
+      "calories":28,
+	  "type": "side"
+   },
+   {
+      "mealId":"mayonnaise",
+      "mealName":"Mayonnaise",
+      "calories":135,
+	  "type": "side"
+   },
+   {
+      "mealId":"sourcream",
+      "mealName":"Sour Cream",
+      "calories":115,
+	  "type": "side"
+   },
+   {
+      "mealId":"garden",
+      "mealName":"Garden salads",
+      "calories":16,
+	  "type": "salads"
+   },
+   {
+      "mealId":"caprese",
+      "mealName":"Caprese salads",
+      "calories":164,
+	  "type": "salads"
+   },
+   {
+      "mealId":"caesarcrispy",
+      "mealName":"Caesar Crispy salads",
+      "calories":324,
+	  "type": "salads"
+   },
+   {
+      "mealId":"caesargrilled",
+      "mealName":"Caesar Grilled salads",
+      "calories":263,
+	  "type": "salads"
+   },
+   {
+      "mealId":"beer",
+      "mealName":"Beer",
+      "calories":195,
+	  "type": "drinks"
+   },
+   {
+      "mealId":"water",
+      "mealName":"Water",
+      "calories":0,
+	  "type": "drinks"
+   },
+   {
+      "mealId":"cocacola",
+      "mealName":"Coca Cola",
+      "calories":212,
+	  "type": "drinks"
+   },
+   {
+      "mealId":"fanta",
+      "mealName":"Fanta",
+      "calories":108,
+	  "type": "drinks"
+   },
+   {
+      "mealId":"fuzetea",
+      "mealName":"Fuze Tea",
+      "calories":108,
+	  "type": "drinks"
+   },
+   {
+      "mealId":"sprite",
+      "mealName":"Sprite",
+      "calories":4,
+	  "type": "drinks"
+   },
+   {
+      "mealId":"twix",
+      "mealName":"McFlurry Twix",
+      "calories":465,
+	  "type": "deserts"
+   },
+   {
+      "mealId":"mcflurrymm",
+      "mealName":"McFlurry M'Ms",
+      "calories":349,
+	  "type": "deserts"
+   },
+   {
+      "mealId":"snickers",
+      "mealName":"McFlurry Snickers",
+      "calories":480,
+	  "type": "deserts"
+   },
+   {
+      "mealId":"applepie",
+      "mealName":"Apple Pie",
+      "calories":228,
+	  "type": "deserts"
+   },
+   {
+      "mealId":"sundaechoco",
+      "mealName":"McSundae Choco",
+      "calories":278,
+	  "type": "deserts"
+   },
+   {
+      "mealId":"sundaecaramel",
+      "mealName":"McSundae Caramel",
+      "calories":227,
+	  "type": "deserts"
+   },
+   {
+      "mealId":"shakechoco",
+      "mealName":"Chocolate Shake",
+      "calories":183,
+	  "type": "deserts"
+   },
+   {
+      "mealId":"shakestrawberry",
+      "mealName":"Strawberry Shake",
+      "calories":178,
+	  "type": "deserts"
+   }
+]

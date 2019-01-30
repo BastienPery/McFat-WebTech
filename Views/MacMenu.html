@@ -8,228 +8,43 @@
       <!--CSS Stylesheets-->
       <link rel="stylesheet" type="text/css" href="MacMenu.css" />
       <title></title>
+      <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
    </head>
    <body>
+      <script>startTimer();</script>
       <p>Drag the meals to the rectangle ---- Click on the meal to remove it</p>
-      <ul id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" class="list-unstyled list-inline text-center"></ul>
-      </ul>
+      <div id="proba">
+         <ul id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" class="list-unstyled list-inline text-center"></ul>
+         </ul>
+      </div>
+      <div id="calories" style="color: red;">TOTAL CALORIES:</div>
+      <br><br>
+      <div style="width:800px; margin:0 auto;">
+         <div>SEND ORDER TO YOUR EMAIL</div>
+         <input placeholder="Your Email" type="text" id="email" name="email" />
+         <input placeholder="Your Name" type="text" id="name" name="name" />
+         <input type="button" value="Submit" 
+            onclick="sendEmail(document.getElementById('email').value, document.getElementById('name').value)" />
+      </div>
       <h3>Main meals</h3>
-      <ul id="div2" class="list-unstyled list-inline text-center">
-         <li id="1baconrosti" draggable="true" ondragstart="drag(event)" >
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" src="img/main/baconrosti.jpg" ondragstart="drag(event)" draggable="false"  /> 
-               <figcaption>Bacon Rosty</figcaption>
-            </div>
-         </li>
-         <li id="1bigmac" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" src="img/main/bigmac.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption>Big Mac</figcaption>
-            </div>
-         </li>
-         <li id="1bigtasty" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="1bigtasty" src="img/main/bigtasty.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption> Big Tasty</figcaption>
-            </div>
-         </li>
-         <li id="1cheeseburger" draggable="true" ondragstart="drag(event)">
-            <div id="1cheeseburger" class="thumbnail">
-               <img onclick="removeImg(this)" src="img/main/cheeseburger.jpg" draggable="false" ondragstart="drag(event)" 
-                  /> 
-               <figcaption>Cheeseburger</figcaption>
-            </div>
-         </li>
-         <li id="1hamburger" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" src="img/main/hamburger.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption>  Hamburger</figcaption>
-            </div>
-         </li>
-         <li id="1mcchicken" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="1mcchicken" src="img/main/mcchicken.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption> McChicken</figcaption>
-            </div>
-         </li>
-         <li id="1mccountry" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="1mccountry" src="img/main/mccountry.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption> McCountry</figcaption>
-            </div>
-         </li>
-         <li id="1mcnuggets9" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="1mcnuggets9" src="img/main/mcnuggets9.jpg" draggable="false" ondragstart="drag(event)" 
-                  /> 
-               <figcaption>9 McNuggets</figcaption>
-            </div>
-         </li>
-         <li id="toast" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="toast" src="img/main/toast.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption> Toast</figcaption>
-            </div>
-         </li>
+      <ul id="main" class="list-unstyled list-inline text-center">
+         <script>findMeals("main")</script>
       </ul>
       <h3>Side meals</h3>
-      <ul id="div3" class="list-unstyled list-inline text-center">
-         <li id="2fries" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="2fries" src="img/side/fries.jpg" draggable="false"  /> 
-               <figcaption>Fries</figcaption>
-            </div>
-         </li>
-         <li id="2potato" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="2potato" src="img/side/potato.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption> Potato Wedges</figcaption>
-            </div>
-         </li>
-         <li id="2ketchup" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="2ketchup" src="img/side/ketchup.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption>Ketchup</figcaption>
-            </div>
-         </li>
-         <li id="2mayonnaise" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="2mayonnaise" src="img/side/mayonnaise.jpg" draggable="false" ondragstart="drag(event)" 
-                  />
-               <figcaption> Mayonnaise</figcaption>
-            </div>
-         </li>
-         <li id="2sourcream" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="2sourcream" src="img/side/sourcream.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption>Sour Cream</figcaption>
-            </div>
-         </li>
+      <ul id="side" class="list-unstyled list-inline text-center">
+         <script>findMeals("side")</script>
       </ul>
       <h3>Salads</h3>
-      <ul id="div4" class="list-unstyled list-inline text-center">
-         <li id="3garden" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="3garden" src="img/salads/garden.jpg" draggable="false"  />
-               <figcaption>Garden Salad</figcaption>
-            </div>
-         </li>
-         <li id="3potato" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="3potato" src="img/salads/caprese.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption>Caprese Salad</figcaption>
-            </div>
-         </li>
-         <li id="3caesarcrispy" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="3caesarcrispy" src="img/salads/caesarcrispy.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption> Caesar Crispy Salad</figcaption>
-            </div>
-         </li>
-         <li id="3caesargrilled" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="3caesargrilled" src="img/salads/caesargrilled.jpg" draggable="false" ondragstart="drag(event)" 
-                  /> 
-               <figcaption>Caesar Grilled Salad</figcaption>
-            </div>
-         </li>
+      <ul id="salads" class="list-unstyled list-inline text-center">
+         <script>findMeals("salads")</script>
       </ul>
       <h3>Drinks</h3>
-      <ul id="div4" class="list-unstyled list-inline text-center">
-         <li id="4beer" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="4beer" src="img/drinks/beer.jpg" draggable="false"  />
-               <figcaption>Beer</figcaption>
-            </div>
-         </li>
-         <li id="4water" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="4water" src="img/drinks/jana.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption>Water</figcaption>
-            </div>
-         </li>
-         <li id="4cocacola" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="4cocacola" src="img/drinks/cocacola.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption> Coca Cola</figcaption>
-            </div>
-         </li>
-         <li id="4fanta" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="4fanta" src="img/drinks/fanta.jpg" draggable="false" ondragstart="drag(event)" 
-                  /> 
-               <figcaption>Fanta</figcaption>
-            </div>
-         </li>
-         <li id="4fuzetea" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="4fuzetea" src="img/drinks/fuzetea.jpg" draggable="false" ondragstart="drag(event)" 
-                  /> 
-               <figcaption>Fuzetea</figcaption>
-            </div>
-         </li>
-         <li id="4sprite" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="4sprite" src="img/drinks/sprite.jpg" draggable="false" ondragstart="drag(event)" 
-                  /> 
-               <figcaption>Sprite</figcaption>
-            </div>
-         </li>
+      <ul id="drinks" class="list-unstyled list-inline text-center">
+         <script>findMeals("drinks")</script>
       </ul>
       <h3>Deserts</h3>
-      <ul id="div4" class="list-unstyled list-inline text-center">
-         <li id="5twix" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="5twix" src="img/deserts/twix.jpg" draggable="false"  />
-               <figcaption>McFlurry Twix</figcaption>
-            </div>
-         </li>
-         <li id="5mm" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="5mm" src="img/deserts/mm.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption>McFlurry MMs</figcaption>
-            </div>
-         </li>
-         <li id="5twix" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="5twix" src="img/deserts/twix.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption> McFlurry Twix</figcaption>
-            </div>
-         </li>
-         <li id="5applepie" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="5applepie" src="img/deserts/applepie.jpg" draggable="false" ondragstart="drag(event)" 
-                  /> 
-               <figcaption>Apple Pie</figcaption>
-            </div>
-         </li>
-         <li id="5sundaechoco" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="5sundaechoco" src="img/deserts/sundaechoco.jpg" draggable="false"  />
-               <figcaption>McSundae Choco</figcaption>
-            </div>
-         </li>
-         <li id="6sundaecaramel" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="6sundaecaramel" src="img/deserts/sundaecaramel.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption>
-               McSundae Caramel 
-               <figcaption>
-            </div>
-         </li>
-         <li id="5shakechoco" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="5shakechoco" src="img/deserts/shakechoco.jpg" draggable="false" ondragstart="drag(event)"  />
-               <figcaption> Chocolate Shake</figcaption>
-            </div>
-         </li>
-         <li id="5shakestrawberry" draggable="true" ondragstart="drag(event)">
-            <div class="thumbnail">
-               <img onclick="removeImg(this)" id="5shakestrawberry" src="img/deserts/shakestrawberry.jpg" draggable="false" ondragstart="drag(event)" 
-                  /> 
-               <figcaption>Strawberry Shake</figcaption>
-            </div>
-         </li>
+      <ul id="deserts" class="list-unstyled list-inline text-center">
+         <script>findMeals("deserts")</script>
       </ul>
    </body>
 </html>
