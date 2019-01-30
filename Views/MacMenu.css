@@ -1,11 +1,30 @@
 #div1 {
-  margin: 10px;
+  margin: auto;
   padding: 20px;
+  max-width : 50%;
   border: 1px solid black;
 }
 
 #div2, #div3, #div4 {
   border: 1px solid black;
+}
+
+h3 {
+    margin-left: 20%;
+}
+
+#calories
+{
+    margin-left : 30%;
+    margin-right : 50%;
+    margin-top : 2%;
+}
+
+.form
+{
+    margin-left : 50%;
+    margin-top:-2%;
+    margin-right : 20%;
 }
 
 
@@ -28,8 +47,8 @@
     }
 	
 .thumbnail {
-    width:140px;
-    height:140px;
+    width:110px;
+    height:110px;
     position:relative;
 }
 

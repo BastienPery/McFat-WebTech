@@ -112,6 +112,16 @@
         you click on the button "Draw  Statistic", some charts will appear and
         show you the data you asked for.\\
         {\color{color_subsection}\subsection{MacMenu}}
+        \noindent The MacMenu page is the page where user can create and see his order.
+         Meals are divided into 5 categories: main meals, side meals, salads, drinks 
+         and deserts. Each user can add as much meals of each category as he wants. 
+         Meals are added using drag-and-drop functionality. As user is adding his meals,
+          concurrently our web application is calculating how much calories will users 
+          order have. At anytime, user can remove any of his meals from the order by 
+          just clicking on the picture of the meal. As the meal is removed, also the 
+          sum of calories will be downgraded for appropriate amount. When user is 
+          finished with his order, if he wants, he can write his name and email, and 
+          order will be sent to his email address.\\
 
     {\color{color_section}\section{Web technologies used}}
 
@@ -124,7 +134,7 @@
     \begin{itemize}
         \item Canvas as graphic technology for the statistic charts on MacStats
         \item WebStorage as database to store all the McDonald locations and do some analysis on it
-        \item WebWorkers on the MacMenu page which allow you to send your menu by mail to someone
+        \item WebWorkers on the MacMenu page which calculate how long we need to create an order
         \item The Geolocation API to find the user's location on MacMap
         \item Some HTML5 forms on MacStats
         \item The drag and drop HTML5 techonlogy on MacMenu.
@@ -133,6 +143,17 @@
 
     {\color{color_section}\section{Separation of concerns}}
 
-    {\color{color_section}\section{Context of implementation}}
+    \noindent Separation of Concerns(SoC) refers to the idea that computer programs should be separated into distinct sections so that each section addresses a specific concern. By distinguishing parts of our code within well-defined interfaces, we can create programs that have distinct subroutines mapped out into more readable terms. In doing so, we can maintain order within our program while allowing for more concise logical conclusions on a step-by-step basis. \\
+   
+    \noindent In our web application, we used Web Storage as model part of our app. We were using local storage functionality, which stores data with no expiration date. In our database we were saving two types of objects, one which had latitude, longitude and city of each McDonald's restaurant, and one which was containing type, name, and amount of calories for each of our meal. That data was accessed from controllers we implemented in JavaScript. After we have loaded that data, we were using a lot of different computations based on it in our controllers. All that was necessary because of view part of our app, which we implemented as html files. There we have rendered all the parts of our app so it is visible to users. Also, there were some dynamic computations we needed based on user activity, such as calculation of total calories, so after every meal that was added to the order, our view and controller part communicated because of calculating and rendering new sum of calories.\\
+
+    {\color{color_subsection}\subsection{MVC}}
+
+    \noindent As we said before, we used a lot of different technologies with different
+    roles in our application. To make it maintainable and easier to understand
+    for developers, we divided our all application following the MVC pattern.\\
+
+    \noindent We have different controllers which are controlling views update,
+    making computations and be the link between the view and the database.\\
 
 \end{document}
