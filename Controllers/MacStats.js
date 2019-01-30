@@ -16,6 +16,9 @@ function drawStatistic() {
   else if ($("#stats option:selected").val() == "nbrPC") {
     NbrOfMcDonaldsPC()
   }
+  else if ($("#stats option:selected").val() == "nbrPerInhabitants") {
+    NbrOfMcDonaldsPerInhabitants()
+  }
 }
 
 function NbrOfMcDonalds() {
@@ -46,6 +49,21 @@ function NbrOfMcDonaldsPC() {
   }
 
   drawBarChart("Number of McDonalds per 100 000 people", "Number of McDonalds per 100 000 people", currentdata)
+}
+
+function NbrOfMcDonaldsPerInhabitants() {
+
+  var currentdata = [];
+  var obj = document.getElementById('countries')
+  for (var i = 0; i < obj.options.length; i++) {
+    if (obj.options[i].selected) {
+      var country = obj.options[i].innerHTML;
+      var data = { y: datapoints[country].mc / (datapoints[country].pop), label: country }
+      currentdata.push(data)
+    }
+  }
+
+  drawBarChart("Number of McDonalds per inhabitant", "Number of McDonalds per inhabitant", currentdata)
 }
 
 
