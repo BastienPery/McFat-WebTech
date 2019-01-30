@@ -29,7 +29,6 @@ function findNearestMc(longitude, latitude) {
 				mcPosition = JSON.parse(database.key(i));
 			}
 			catch (e) {
-				console.log(database.key(i));
 				j--;
 				continue;
 			}
