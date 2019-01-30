@@ -23,22 +23,31 @@ function findNearestMc(longitude, latitude) {
 
     function calculDist(currentPosition) {
         var dist = new Array();
-        for (var i = 0; i < database.length; i++) {
+        for (var i = 0, j=0; i < database.length; i++, j++) {
             dist[i] = new Array();
-            mcPosition = JSON.parse(database.key(i));
-            dist[i][0] = distance(mcPosition.Latitude, mcPosition.Longitude, currentPosition[1], currentPosition[0]);
-            dist[i][1] = database.getItem(database.key(i));
+            try {
+				mcPosition = JSON.parse(database.key(i));
+			}
+			catch (e) {
+				console.log(database.key(i));
+				j--;
+				continue;
+			}
+            dist[j][0] = distance(mcPosition.Latitude, mcPosition.Longitude, currentPosition[1], currentPosition[0]);
+            dist[j][1] = database.getItem(database.key(i));
         }
         return dist;
     };
 
     var distances = calculDist(currentPosition);
+	
     distances.sort(sortFunction);
 
     displayNearestMc(distances);
 }
 
 function displayNearestMc(distances) {
+	console.log(distances)
     var x = document.getElementById("NearestMcDonald");
     x.innerHTML = "The closest McDonald is " + (distances[0][0]).toFixed(2) + " meters away." +
         "<br><br>In " + distances[0][1];
