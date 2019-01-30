@@ -21,12 +21,12 @@ function drawStatistic() {
 function NbrOfMcDonalds() {
 
   var currentdata = [];
-  var obj = document.getElementById('countries')
+  var obj = document.getElementById('countries');
   for (var i = 0; i < obj.options.length; i++) {
     if (obj.options[i].selected) {
       var country = obj.options[i].innerHTML;
       var data = { y: datapoints[country].mc, label: country }
-      currentdata.push(data)
+      currentdata.push(data);
     }
   }
 
