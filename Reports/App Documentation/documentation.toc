@@ -1,0 +1,10 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Application description}{2}{section.1}
+\contentsline {section}{\numberline {2}Functionalities}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}MacHome}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}MacMap}{2}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}MacStats}{3}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}MacMenu}{3}{subsection.2.4}
+\contentsline {section}{\numberline {3}Web technologies used}{3}{section.3}
+\contentsline {section}{\numberline {4}Separation of concerns}{3}{section.4}
+\contentsline {section}{\numberline {5}Context of implementation}{3}{section.5}

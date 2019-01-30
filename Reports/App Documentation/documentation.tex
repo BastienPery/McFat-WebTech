@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+
+
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+
+\usepackage{geometry}
+\geometry{hmargin=2.5cm,vmargin=2.5cm}
+
+\usepackage{comment}
+
+\usepackage{xcolor}
+\definecolor{color_section}{RGB}{230,8,31}
+\definecolor{color_subsection}{RGB}{252,170,50}
+
+\usepackage{hyperref}
+
+\begin{document}
+    \begin{titlepage}
+        \title{Web technology project plan}
+        \author{Mac group}
+
+        \begin{figure}
+            \begin{minipage}[c]{0.40\linewidth}
+                \includegraphics[width=0.7\textwidth]{TUGraz.png}
+            \end{minipage}
+            \hfill
+            \begin{minipage}[c]{0.48\linewidth}
+                \hfill
+                \includegraphics[width=0.7\textwidth]{Erasmus.jpeg}
+            \end{minipage}
+        \end{figure}
+
+        \begin{center}
+            \includegraphics[width=0.5\textwidth]{mcdonalds-fat-logo.jpg}\\
+            \vspace{1cm}
+            \Large McFat Web Application Documentation\\
+            \rule{5cm}{.5pt}\\
+            \vspace{0.6cm}
+            {\Large Web technology}\\
+            \vspace{0.1cm}
+            {\Large Winter semester 2018-2019} \\
+            \vspace{5em}
+
+            \textbf{Jens Mellberg - Matteo Milo$\mathbf{\check{s}}$ - Bastien Pery}\\
+        \end{center}
+
+    \end{titlepage}
+
+    \renewcommand{\contentsname}{\color{color_section}\\Table of contents}
+    \tableofcontents
+
+    \newpage
+
+    {\color{color_section}\section{Application description}}
+    Mac group was composed by four students and four different nationalities.
+        Croatian, French, Swedish and Finnish.
+        Unfortunately, one of us drop the course just in the middle. 
+        But, As part of our Erasmus exchange program, 
+        we wanted to develop a web application which could be used by a lot 
+        of people around the world and especially by Erasmus people.\\
+
+        \noindent Our application reached this goal because, thanks to it,
+        every european student is now able to find important 
+        information about McDonald in Europe.\\
+
+    \noindent Our McFat Web Application is divided into four different parts, each including different functionalities:
+    \begin{itemize}
+        \item MacHome
+        \item MacMap
+        \item MacStats
+        \item MacMenu
+    \end{itemize} 
+
+    {\color{color_section}\section{Functionalities}}
+
+        {\color{color_subsection}\subsection{MacHome}}
+        \noindent The MacHome page is basically a simple home page which includes 3
+        different things. A McDonald logo, a brief description of the
+        application and a navigation bar which helps you to reah any other
+        part of our application.\\
+
+        {\color{color_subsection}\subsection{MacMap}}
+        \noindent The MacMap page is a little bit more complex. Indeed, like
+        all other pages, it includes the navigation bar but also a map and one
+        button.\\
+
+        \noindent The map is rendered by an external map API provided by 
+        \url{https://www.esri.com}. Thanks to this API, you can easily
+        navigate on the map, zoom-in or zoom-out on it. Also, you can see 
+        that almost all european McDonald locations are displayed on it.
+        (We linked some data with the API). If you click on one location,
+        it will display the latitude, the longitude and the city of this
+        location.\\
+
+        \noindent The second thing on this page is the button "Display your
+        coordinates and find the nearest McDonald!". If you click on this button
+        our application will give you your location (if you accept it) and give
+        you how far is the nearest McDonald and in which city!
+
+        \newpage
+
+        {\color{color_subsection}\subsection{MacStats}}
+        \noindent On the MacStats page you can find some new different elements.
+        Indeed, on this page, thanks to 2 different forms, users can display
+        some statistics about European McDonalds.\\
+
+        \noindent For example, you can select as many countries as you wish
+        and choose which data you want to know such as number of restaurants
+        in these countries, number of restaurants per 100k inhabitants... When
+        you click on the button "Draw  Statistic", some charts will appear and
+        show you the data you asked for.\\
+        {\color{color_subsection}\subsection{MacMenu}}
+
+    {\color{color_section}\section{Web technologies used}}
+
+    \noindent In our application we used a lot of different web technologies.\\
+
+    \noindent First of all AJAX. Our application is an asynchronous web application.
+    To perform this task, we used the jQuery API.\\
+
+    \noindent We also used some HTML5 technologies which were required:\\
+    \begin{itemize}
+        \item Canvas as graphic technology for the statistic charts on MacStats
+        \item WebStorage as database to store all the McDonald locations and do some analysis on it
+        \item WebWorkers on the MacMenu page which allow you to send your menu by mail to someone
+        \item The Geolocation API to find the user's location on MacMap
+        \item Some HTML5 forms on MacStats
+        \item The drag and drop HTML5 techonlogy on MacMenu.
+    \end{itemize}
+
+
+    {\color{color_section}\section{Separation of concerns}}
+
+    {\color{color_section}\section{Context of implementation}}
+
+\end{document}
