@@ -4,53 +4,47 @@
 <head>
 
   <meta charset="utf-8" />
-    <title>MacStats</title>
+  <title>MacStats</title>
 
-    <script src="../Controllers/MacStats.js"></script>
-    <script src="../Controllers/jquery.js"></script>
-    <script src="../database.js"></script>
+  <script src="../Controllers/MacStats.js"></script>
+  <script src="../Controllers/jquery.js"></script>
 
-
-    <link href="MacStats.css" rel="stylesheet" />
+  <link href="MacStats.css" rel="stylesheet" />
 
 
 
 </head>
 
 <script>
+  $(document).ready(function () {
+    onLoad();
 
-$(document).ready(function() {
-onLoad();
-
-});
-
-
-
+  });
 </script>
 
 <body>
 
-<div id = "country">
-<p>
-Country Selection:
-<select name="countries" id="countries" size="5" multiple>
-</select>
-</p>
-<button onclick="chooseAll()">Choose All</button>
-</div>
+  <div id="country">
+    <p>
+      Country Selection:
+      <select name="countries" id="countries" size="5" multiple>
+      </select>
+    </p>
+    <button onclick="chooseAll()">Choose All</button>
+  </div>
 
-<canvas id="myCanvas" width="200" height="100"> </canvas>
+  <canvas id="myCanvas" width="200" height="100"> </canvas>
 
 
-<button id = "draw" onclick="drawStatistic()">Draw Statistic</button>
+  <button id="draw" onclick="drawStatistic()">Draw Statistic</button>
 
-<div id = "statlist">
-Statistic type :
-<select name="statistic" id = "stats">
-<option value="nbr">Number of McDonalds</option>
-<option value="nbrPC">Number of McDonalds per 100 000 persons</option>
-</select>
-</div>
+  <div id="statlist">
+    Statistic type :
+    <select name="statistic" id="stats">
+      <option value="nbr">Number of McDonalds</option>
+      <option value="nbrPC">Number of McDonalds per 100 000 persons</option>
+    </select>
+  </div>
 
 </body>
 

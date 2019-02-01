@@ -9,8 +9,9 @@ body {
 	position:fixed;
   height: 500px;
   top:450px;
-  left:300px;
-   width: 70%;
+  left:480px;
+   width: 50%;
+   background-color : white;
 }
 
 
@@ -19,8 +20,6 @@ body {
   left:900px;
   top:250px;
 }
-
-
 
 
 #country {
