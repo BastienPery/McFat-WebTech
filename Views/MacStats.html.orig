@@ -4,28 +4,40 @@
 <head>
 
   <meta charset="utf-8" />
-    <title>MacStats</title>
+  <title>MacStats</title>
 
   <script src="../Controllers/MacStats.js"></script>
   <script src="../Controllers/jquery.js"></script>
+<<<<<<< HEAD
+  <script src="../database.js"></script>
+=======
 
   <link href="MacStats.css" rel="stylesheet" />
+>>>>>>> MacStats
 
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
+  <link href="MacStats.css" rel="stylesheet" />
 
 </head>
 
 <script>
   $(document).ready(function () {
     onLoad();
+<<<<<<< HEAD
+=======
 
+>>>>>>> MacStats
   });
 </script>
 
 <body>
-  <div id="chartContainer"></div>
 
+<<<<<<< HEAD
+  <div class="country">
+=======
   <div id="country">
+>>>>>>> MacStats
     <p>
       Country Selection:
       <select name="countries" id="countries" size="5" multiple>
@@ -44,6 +56,11 @@
     <select name="statistic" id="stats">
       <option value="nbr">Number of McDonalds</option>
       <option value="nbrPC">Number of McDonalds per 100 000 persons</option>
+<<<<<<< HEAD
+      <option value="nbrPerInhabitants">Number of McDonalds per inhabitant</option>
+      <option value="price">Average meal price</option>
+=======
+>>>>>>> MacStats
     </select>
   </div>
 

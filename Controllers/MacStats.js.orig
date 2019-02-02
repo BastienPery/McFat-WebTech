@@ -1,0 +1,173 @@
+var lines = [];
+var datapoints = [];
+
+function chooseAll() {
+  var obj = document.getElementById('countries')
+  for (var i = 0; i < obj.options.length; i++) {
+    obj.options[i].selected = true;
+  }
+
+}
+
+function drawStatistic() {
+  if ($("#stats option:selected").val() == "nbr") {
+    NbrOfMcDonalds()
+  }
+  else if ($("#stats option:selected").val() == "nbrPC") {
+    NbrOfMcDonaldsPC()
+  }
+<<<<<<< HEAD
+  else if ($("#stats option:selected").val() == "nbrPerInhabitants") {
+    NbrOfMcDonaldsPerInhabitants()
+  }
+=======
+>>>>>>> MacStats
+}
+
+function NbrOfMcDonalds() {
+
+  var currentdata = [];
+<<<<<<< HEAD
+  var obj = document.getElementById('countries');
+=======
+  var obj = document.getElementById('countries')
+>>>>>>> MacStats
+  for (var i = 0; i < obj.options.length; i++) {
+    if (obj.options[i].selected) {
+      var country = obj.options[i].innerHTML;
+      var data = { y: datapoints[country].mc, label: country }
+<<<<<<< HEAD
+      currentdata.push(data);
+=======
+      currentdata.push(data)
+>>>>>>> MacStats
+    }
+  }
+
+  drawBarChart("Number of McDonalds per country", "Number of McDonalds", currentdata)
+}
+
+function NbrOfMcDonaldsPC() {
+
+  var currentdata = [];
+  var obj = document.getElementById('countries')
+  for (var i = 0; i < obj.options.length; i++) {
+    if (obj.options[i].selected) {
+      var country = obj.options[i].innerHTML;
+      var data = { y: datapoints[country].mc / (datapoints[country].pop / 100000), label: country }
+      currentdata.push(data)
+    }
+  }
+<<<<<<< HEAD
+
+  drawBarChart("Number of McDonalds per 100 000 people", "Number of McDonalds per 100 000 people", currentdata)
+}
+
+function NbrOfMcDonaldsPerInhabitants() {
+
+  var currentdata = [];
+  var obj = document.getElementById('countries')
+  for (var i = 0; i < obj.options.length; i++) {
+    if (obj.options[i].selected) {
+      var country = obj.options[i].innerHTML;
+      var data = { y: datapoints[country].mc / (datapoints[country].pop), label: country }
+      currentdata.push(data)
+    }
+  }
+
+  drawBarChart("Number of McDonalds per inhabitant", "Number of McDonalds per inhabitant", currentdata)
+=======
+
+  drawBarChart("Number of McDonalds per 100 000 people", "Number of McDonalds per 100 000 people", currentdata)
+>>>>>>> MacStats
+}
+
+
+function onLoad() {
+  $.ajax({
+    type: "GET",
+    url: "McDonaldsPerCountry.txt",
+    dataType: "text",
+    success: function (data) { processData(data); }
+  });
+}
+
+function processData(allText) {
+
+  var select = document.getElementById('countries');
+
+
+  var allTextLines = allText.split(/\r\n|\n/);
+  for (var i = 1; i < allTextLines.length; i++) {
+    var data = allTextLines[i].split(",");
+    if (data[0] == "") {
+      continue;
+    }
+    datapoints[data[0]] = { mc: parseFloat(data[1]), pop: parseFloat(data[2]) };
+    var opt = document.createElement('option');
+    opt.value = i;
+    opt.innerHTML = data[0];
+    select.appendChild(opt);
+  }
+
+  var options = $("#countries option");                    // Collect options
+  options.detach().sort(function (a, b) {               // Detach from select, then Sort
+    var at = $(a).text();
+    var bt = $(b).text();
+    return (at > bt) ? 1 : ((at < bt) ? -1 : 0);            // Tell the sort function how to order
+  });
+  options.appendTo("#countries");
+
+}
+
+function drawBarChart(title, text, labels) {
+<<<<<<< HEAD
+  var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+
+    title: {
+      text: title
+    },
+    axisX: {
+      interval: 1
+    },
+    axisY2: {
+      interlacedColor: "rgba(1,77,101,.2)",
+      gridColor: "rgba(1,77,101,.1)",
+      title: text
+    },
+    data: [{
+      type: "bar",
+      name: "mcdonalds",
+      axisYType: "secondary",
+      color: "#014D65",
+      dataPoints: labels
+    }]
+  });
+  chart.render();
+=======
+  var canvas = document.getElementById('myCanvas');
+  // check for browser support
+  if (canvas && canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+    if (ctx) {
+      ctx.fillStyle = '#000';
+    }
+  }
+  canvas.width = 1000;
+  canvas.height = 1000;
+  ctx.font = "20px Arial";
+  ctx.textAlign = "end"
+  max = 0;
+  maxDist = 700;
+  for (i = 0; i < labels.length; i++) {
+    ctx.fillText(labels[i].label, 235, 20 + 30 * i);
+    max = Math.max(max, labels[i].y);
+  }
+  ctx.fillStyle = '#F00';
+  for (i = 0; i < labels.length; i++) {
+    ctx.fillRect(245, 10 + 30 * i, (labels[i].y / max) * maxDist, 10);
+    ctx.fillText(labels[i].y, 295 + (labels[i].y / max) * maxDist, 20 + 30 * i);
+  }
+>>>>>>> MacStats
+}

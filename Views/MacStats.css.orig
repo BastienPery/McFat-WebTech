@@ -5,6 +5,8 @@ body {
 	background-size: 100%;
 }
 
+<<<<<<< HEAD
+=======
 #myCanvas {
 	position:fixed;
   height: 500px;
@@ -15,21 +17,35 @@ body {
 }
 
 
+>>>>>>> MacStats
 #statlist {
   position:fixed;
-  left:900px;
-  top:250px;
+  left:50%;
+  top:23%;
 }
 
+<<<<<<< HEAD
+#chartContainer {
+  position:fixed;
+  height: 55%;
+  top:40%;
+  left:20%;
+  width : 60%;
+  max-width: 100%;
+}
+
+.country {
+=======
 
 #country {
+>>>>>>> MacStats
   position:fixed;
-  left:400px;
-  top:250px;
+  left:25%;
+  top:15%;
 }
 
 #draw {
   position:fixed;
-  left:900px;
-  top:400px;
+  left:45%;
+  top:35%;
 }
